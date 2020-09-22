@@ -22,10 +22,12 @@ if ( ! function_exists( 'add_action' )) {
 
 // Includes
 include( 'includes/activate.php' );
+include( 'includes/init.php' );
 
 
 // Hooks
-register_activation_hook( __FILE__, 'prerecipe_activate_plugin' );
+register_activation_hook( __FILE__, 'prrecipe_activate_plugin' );
+add_action( 'init', 'prrecipe_recipe_init' );
 
 
 // Shortcodes
