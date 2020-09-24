@@ -18,6 +18,7 @@ if ( ! function_exists( 'add_action' )) {
 
 
 // Setup
+define('RECIPE_PLUGIN_URL', __FILE__ );
 
 
 // Includes
@@ -25,6 +26,8 @@ include( 'includes/activate.php' );
 include( 'includes/init.php' );
 include( 'process/save-post.php' );
 include( 'process/filter-content.php' );
+include( 'includes/front/enqueue.php' );
+include( 'process/rate-recipe.php');
 
 
 // Hooks
@@ -32,6 +35,8 @@ register_activation_hook( __FILE__, 'prrecipe_activate_plugin' );
 add_action( 'init', 'prrecipe_recipe_init' );
 add_action( 'save_post_recipe', 'prrecipe_save_post_admin', 10, 3 );
 add_filter( 'the_content', 'prrecipe_filter_recipe_content' );
+add_action( 'wp_enqueue_scripts', 'prrecipe_enqueue_scripts', 100);
+add_action( 'wp_ajax_prrecipe_rate_recipe', 'prrecipe_rate_recipe' );
 
 
 // Shortcodes

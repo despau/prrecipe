@@ -14,5 +14,8 @@ function prrecipe_filter_recipe_content( $content ){
 
     $recipe_html            =   str_replace( 'RATE_I18N', __("Rating", "prrecipe" ), $recipe_html );
 
+    $recipe_html            =   str_replace( 'RECIPE_ID', $post->ID, $recipe_html );
+
+
     return $recipe_html.$content;
 }
