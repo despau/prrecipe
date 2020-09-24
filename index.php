@@ -24,12 +24,14 @@ if ( ! function_exists( 'add_action' )) {
 include( 'includes/activate.php' );
 include( 'includes/init.php' );
 include( 'process/save-post.php' );
+include( 'process/filter-content.php' );
 
 
 // Hooks
 register_activation_hook( __FILE__, 'prrecipe_activate_plugin' );
 add_action( 'init', 'prrecipe_recipe_init' );
 add_action( 'save_post_recipe', 'prrecipe_save_post_admin', 10, 3 );
+add_filter( 'the_content', 'prrecipe_filter_recipe_content' );
 
 
 // Shortcodes
