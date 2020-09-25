@@ -37,6 +37,9 @@ function prrecipe_rate_recipe(){
         WHERE recipe_id='" . $post_ID . "'"
     ), 1);
 
+
+
+
     update_post_meta( $post_ID, 'recipe_data', $recipe_data );
 
     $output['status']   =   2;

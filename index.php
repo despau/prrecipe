@@ -37,6 +37,7 @@ add_action( 'save_post_recipe', 'prrecipe_save_post_admin', 10, 3 );
 add_filter( 'the_content', 'prrecipe_filter_recipe_content' );
 add_action( 'wp_enqueue_scripts', 'prrecipe_enqueue_scripts', 100);
 add_action( 'wp_ajax_prrecipe_rate_recipe', 'prrecipe_rate_recipe' );
+add_action( 'wp_ajax_nopriv_prrecipe_rate_recipe', 'prrecipe_rate_recipe' );
 
 
 // Shortcodes
