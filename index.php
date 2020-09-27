@@ -28,6 +28,7 @@ include( 'process/save-post.php' );
 include( 'process/filter-content.php' );
 include( 'includes/front/enqueue.php' );
 include( 'process/rate-recipe.php');
+include( 'includes/admin/init.php' );
 
 
 // Hooks
@@ -38,6 +39,7 @@ add_filter( 'the_content', 'prrecipe_filter_recipe_content' );
 add_action( 'wp_enqueue_scripts', 'prrecipe_enqueue_scripts', 100);
 add_action( 'wp_ajax_prrecipe_rate_recipe', 'prrecipe_rate_recipe' );
 add_action( 'wp_ajax_nopriv_prrecipe_rate_recipe', 'prrecipe_rate_recipe' );
+add_action( 'admin_init', 'prrecipe_admin_init' );
 
 
 // Shortcodes
