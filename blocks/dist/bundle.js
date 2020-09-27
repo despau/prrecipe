@@ -90,12 +90,23 @@
 /*!**********************!*\
   !*** ./app/index.js ***!
   \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _recipe_block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./recipe-block */ \"./app/recipe-block/index.js\");\n/* harmony import */ var _recipe_block__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_recipe_block__WEBPACK_IMPORTED_MODULE_0__);\n// MAIN FILE\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9hcHAvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9hcHAvaW5kZXguanM/ZTkyNSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBNQUlOIEZJTEVcbmltcG9ydCAnLi9yZWNpcGUtYmxvY2snOyJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./app/index.js\n");
+
+/***/ }),
+
+/***/ "./app/recipe-block/index.js":
+/*!***********************************!*\
+  !*** ./app/recipe-block/index.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-console.log('Hello Blocks');
+eval("// console.log( wp );\nvar registerBlockType = wp.blocks.registerBlockType;\nvar __ = wp.i18n.__;\nregisterBlockType('prrecipe/recipe', {\n  title: __('Recipe', 'prrecipe'),\n  description: __('Provides a short summary of the recipe', 'prrecipe'),\n  category: 'common',\n  icon: 'welcome-learn-more'\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9hcHAvcmVjaXBlLWJsb2NrL2luZGV4LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vYXBwL3JlY2lwZS1ibG9jay9pbmRleC5qcz9lMjRmIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGNvbnNvbGUubG9nKCB3cCApO1xudmFyIHJlZ2lzdGVyQmxvY2tUeXBlID0gd3AuYmxvY2tzLnJlZ2lzdGVyQmxvY2tUeXBlO1xudmFyIF9fID0gd3AuaTE4bi5fXztcbnJlZ2lzdGVyQmxvY2tUeXBlKCdwcnJlY2lwZS9yZWNpcGUnLCB7XG4gIHRpdGxlOiBfXygnUmVjaXBlJywgJ3BycmVjaXBlJyksXG4gIGRlc2NyaXB0aW9uOiBfXygnUHJvdmlkZXMgYSBzaG9ydCBzdW1tYXJ5IG9mIHRoZSByZWNpcGUnLCAncHJyZWNpcGUnKSxcbiAgY2F0ZWdvcnk6ICdjb21tb24nLFxuICBpY29uOiAnd2VsY29tZS1sZWFybi1tb3JlJ1xufSk7Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./app/recipe-block/index.js\n");
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map
