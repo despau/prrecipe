@@ -1,6 +1,5 @@
 const path              =   require( 'path' );
 const webpack           =   require( 'webpack' );
-const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
 
 module.exports          =   {
     entry:                  './app/index.js',
@@ -24,8 +23,5 @@ module.exports          =   {
                 use:        'babel-loader',
             }
         ]
-    },
-    plugins: [
-        new DependencyExtractionWebpackPlugin(),
-    ]
+    }
 };

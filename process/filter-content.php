@@ -8,7 +8,7 @@ function prrecipe_filter_recipe_content( $content ){
 
     global $post, $wpdb;
 
-    $recipe_data            =   get_post_meta( $post->ID, 'recipe_data', true);
+    $recipe_data            =   get_metadata( $post->ID, 'recipe_data', true);
 
     $recipe_html            =   file_get_contents( 'recipe-template.php', true );
 
@@ -16,7 +16,7 @@ function prrecipe_filter_recipe_content( $content ){
 
     $recipe_html            =   str_replace( 'RECIPE_ID', $post->ID, $recipe_html );
 
-    // $recipe_html            =   str_replace( 'RECIPE_RATING', $recipe_data['rating'], $recipe_html );
+    $recipe_html            =   str_replace( 'RECIPE_RATING', $recipe_data['rating'], $recipe_html );
 
 
     $user_IP            =   $_SERVER['REMOTE_ADDR'];
