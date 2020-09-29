@@ -1,15 +1,20 @@
 const path              =   require( 'path' );
 const webpack           =   require( 'webpack' );
+const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
 
 module.exports          =   {
     entry:                  './app/index.js',
     output: {
-        path:               path.resolve( __dirname, 'dist' ),
         filename:           'bundle.js',
-        publicPath:         '/'
+        path:               path.resolve( __dirname, './dist' ),
+        publicPath:         ''
     },
+    externals: {
+        'react': 'React',
+        'react-dom': 'ReactDOM',
+      },
     mode:                   'development',
-    // watch:                  true,
+    watch:                  true,
     devtool:                'cheap-eval-source-map',
     module: {
         rules: [
@@ -19,5 +24,8 @@ module.exports          =   {
                 use:        'babel-loader',
             }
         ]
-    }
+    },
+    plugins: [
+        new DependencyExtractionWebpackPlugin(),
+    ]
 };
