@@ -74,7 +74,8 @@ registerBlockType( 'prrecipe/recipe', {
         }
     },
 
-    getEditWrapperProps: ({ block_alignment }) => {
+    // This function will automatically triggered whenever there's a change to the block
+    getEditWrapperProps: ( { block_alignment } ) => {
         if( 'left' === block_alignment || 'right' === block_alignment || 'full' === block_alignment ){
             return { 'data-align': block_alignment };
         }
