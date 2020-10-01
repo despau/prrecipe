@@ -30,6 +30,8 @@ include( 'includes/front/enqueue.php' );
 include( 'process/rate-recipe.php');
 include( 'includes/admin/init.php' );
 include( 'blocks/enqueue.php' );
+include( dirname(RECIPE_PLUGIN_URL) . '/includes/widgets.php');
+include( 'includes/widgets/daily-recipe.php' );
 
 
 // Hooks
@@ -42,7 +44,7 @@ add_action( 'wp_ajax_prrecipe_rate_recipe', 'prrecipe_rate_recipe' );
 add_action( 'wp_ajax_nopriv_prrecipe_rate_recipe', 'prrecipe_rate_recipe' );
 add_action( 'admin_init', 'prrecipe_admin_init' );
 add_action( 'enqueue_block_editor_assets', 'prrecipe_enqueue_block_editor_assets' );
-add_action( 'enqueue_block_assets', 'prrecipe_enqueue_block_assets' );
+add_action( 'widgets_init', 'prrecipe_widgets_init' );
 
 
 // Shortcodes
