@@ -4,9 +4,12 @@ import btn_icon from './icon';
 import './editor.scss';
 
 const { registerBlockType }         =   wp.blocks;
+
 const { __ }                        =   wp.i18n;
+
 const { BlockControls,
         InspectorControls }         =   wp.editor;
+
 const { Toolbar, Button, Tooltip,
         PanelBody, PanelRow,
         FormToggle }                =   wp.components;
@@ -23,6 +26,7 @@ registerBlockType( 'prrecipe/night-mode', {
         }
     },
     edit: ( props ) => {
+
         const toggle_night_mode = () => {
             props.setAttributes({
                 night_mode: !props.attributes.night_mode
