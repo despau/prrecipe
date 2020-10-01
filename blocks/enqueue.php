@@ -13,3 +13,13 @@ function prrecipe_enqueue_block_editor_assets(){
     wp_enqueue_script( 'prrecipe_blocks_bundle' );
 
 }
+
+
+function prrecipe_enqueue_block_assets(){
+    wp_register_style(
+        'prrecipe_blocks',
+        plugins_url( './blocks/dist/blocks-main.css', RECIPE_PLUGIN_URL )
+    );
+
+    wp_enqueue_style( 'prrecipe_blocks' );
+}

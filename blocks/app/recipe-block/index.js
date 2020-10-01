@@ -1,5 +1,5 @@
 import block_icons from '../icons/index';
-// import './editor.scss';
+import './editor.scss';
 
 
 const { registerBlockType }     =   wp.blocks;
@@ -8,27 +8,35 @@ const { __ }                    =   wp.i18n;
 const { InspectorControls,
     BlockControls,
     AlignmentToolbar,
-    BlockAlignmentToolbar}      =   wp.editor;
+    BlockAlignmentToolbar }      =   wp.editor;
+
 const { PanelBody, PanelRow,
     TextControl, SelectControl }=   wp.components;
 
 registerBlockType( 'prrecipe/recipe', {
+
     title:                              __( 'Recipe', 'prrecipe' ),
+
     description:                        __(
         'Provides a short summary of a recipe.',
-        'recipe'
+        'prrecipe'
     ),
+
     // common, formatting, layout, widgets, embed
     category:                           'common',
+
     icon:                               block_icons.wapuu,
+
     keywords: [
         __( 'Food', 'prrecipe' ),
         __( 'Ingredients', 'prrecipe' ),
         __( 'Meal Type', 'prrecipe' )
     ],
+
     supports: {
         html:                           false
     },
+
     attributes: {
         ingredients: {
             type:                       'string',
@@ -71,17 +79,16 @@ registerBlockType( 'prrecipe/recipe', {
             return { 'data-align': block_alignment };
         }
     },
-    edit: ( props ) => {
-        // console.log( props );
-        // const updateIngredients = ( new_val ) => {
-        //     props.setAttributes({ ingredients: new_val })
-        // }
+
+    edit: ( props ) => {  // for the backend. wordpress admin
+
+        // console.log( 'this is the props: ', props );
 
         return [
-            <InspectorControls>
+            <InspectorControls> {/* for the settings on the sidebar */}
                 <PanelBody title={ __( 'Basics', 'prrecipe' ) }>
                     <PanelRow>
-                        <p>{ __( 'Configure the contents of your block here.' ,'recipe' ) }</p>
+                        <p>{ __( 'Configure the contents of your block here.' ,'prrecipe' ) }</p>
                     </PanelRow>
 
                     <TextControl
@@ -135,6 +142,7 @@ registerBlockType( 'prrecipe/recipe', {
                         }} />
                 </PanelBody>
             </InspectorControls>,
+
             <div className={ props.className }>
                 <BlockControls>
                     <BlockAlignmentToolbar
@@ -148,8 +156,10 @@ registerBlockType( 'prrecipe/recipe', {
                             props.setAttributes({ text_alignment: new_val });
                         }}/>
                 </BlockControls>
+
                 <ul className="list-unstyled"
                     style={{ textAlign: props.attributes.text_alignment }}>
+                    {/* for the admin. backend list. */}
                     <li>
                         <strong>{ __( 'Ingredients', 'prrecipe' ) }: </strong>
                         <span className="ingredients-ph">{ props.attributes.ingredients }</span>
@@ -174,7 +184,8 @@ registerBlockType( 'prrecipe/recipe', {
             </div>
         ];
     },
-    save: ( props ) => {
+
+    save: ( props ) => { //for the front end.
         return (
             <div className={ `align${props.attributes.block_alignment}` }>
                 <ul className="list-unstyled"
@@ -203,4 +214,5 @@ registerBlockType( 'prrecipe/recipe', {
             </div>
         )
     }
+
 });
