@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import block_icons from '../icons/index';
 
 const { registerBlockType }         =   wp.blocks;
-const { InspectorControls }         =   wp.editor;
+const { InspectorControls }         =   wp.blockEditor;
 const { __ }                        =   wp.i18n;
 const { PanelBody, TextareaControl,
         CheckboxControl,

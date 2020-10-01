@@ -5,10 +5,18 @@ import './editor.scss';
 const { registerBlockType }     =   wp.blocks;
 const { __ }                    =   wp.i18n;
 
-const { InspectorControls,
-    BlockControls,
+const {
     AlignmentToolbar,
-    BlockAlignmentToolbar }      =   wp.editor;
+    BlockAlignmentToolbar }      =   wp.blockEditor;
+
+ const {
+    InspectorControls,
+    BlockControls
+ }                              = wp.blockEditor;
+
+    // wp.editor.InspectorControls is deprecated. Please use wp.blockEditor.InspectorControls instead.
+
+    // wp.editor.BlockControls is deprecated. Please use wp.blockEditor.BlockControls instead.
 
 const { PanelBody, PanelRow,
     TextControl, SelectControl }=   wp.components;

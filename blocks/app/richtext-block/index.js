@@ -6,7 +6,7 @@
 import block_icons from '../icons/index';
 
 const { registerBlockType }         =   wp.blocks;
-const { RichText }                  =   wp.editor;
+const { RichText }                  =   wp.blockEditor;
 const { __ }                        =   wp.i18n;
 
 registerBlockType( 'prrecipe/rich-text', {

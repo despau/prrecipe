@@ -8,7 +8,7 @@ const { registerBlockType }         =   wp.blocks;
 const { __ }                        =   wp.i18n;
 
 const { BlockControls,
-        InspectorControls }         =   wp.editor;
+        InspectorControls }         =   wp.blockEditor;
 
 const { Toolbar, Button, Tooltip,
         PanelBody, PanelRow,
