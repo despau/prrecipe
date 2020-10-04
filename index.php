@@ -32,10 +32,14 @@ include( 'includes/admin/init.php' );
 include( 'blocks/enqueue.php' );
 include( dirname(RECIPE_PLUGIN_URL) . '/includes/widgets.php');
 include( 'includes/widgets/daily-recipe.php' );
+include( 'includes/cron.php' );
+include( 'includes/deactivate.php' );
+include( 'includes/utility.php' );
 
 
 // Hooks
 register_activation_hook( __FILE__, 'prrecipe_activate_plugin' );
+register_deactivation_hook( __FILE__, 'prrecipe_deactivate_plugin' );
 add_action( 'init', 'prrecipe_recipe_init' );
 add_action( 'save_post_recipe', 'prrecipe_save_post_admin', 10, 3 );
 add_filter( 'the_content', 'prrecipe_filter_recipe_content' );
@@ -45,6 +49,7 @@ add_action( 'wp_ajax_nopriv_prrecipe_rate_recipe', 'prrecipe_rate_recipe' );
 add_action( 'admin_init', 'prrecipe_admin_init' );
 add_action( 'enqueue_block_editor_assets', 'prrecipe_enqueue_block_editor_assets' );
 add_action( 'widgets_init', 'prrecipe_widgets_init' );
+add_action( 'prrecipe_daily_recipe_hook', 'prrecipe_daily_generate_recipe' );
 
 
 // Shortcodes

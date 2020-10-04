@@ -24,8 +24,10 @@ function prrerecipe_activate_plugin(){
 
     require_once (ABSPATH . 'wp-admin/includes/upgrade.php' );
 
-
     dbDelta( $createSQL );
+
+    //setting transcient. worpdress will create this hook for us.
+    wp_schedule_event( time(), 'daily', 'prrecipe_daily_recipe_hook',  );
 
 
 }

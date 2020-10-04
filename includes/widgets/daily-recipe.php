@@ -9,7 +9,7 @@ class PRRECIPE_Daily_Recipe_Widget extends WP_Widget {
 		$widget_ops           =   array(
 			'description'       =>  'Displays a random recipe each day.',
 		);
-		parent::__construct( 'r_daily_recipe_widget', 'Recipe of the Day', $widget_ops );
+		parent::__construct( 'prrecipe_daily_recipe_widget', 'Recipe of the Day', $widget_ops );
 	}
 
 	/**
@@ -63,13 +63,13 @@ class PRRECIPE_Daily_Recipe_Widget extends WP_Widget {
         echo $before_widget;
         echo $before_title . $title . $after_title;
 
-        $recipe_id        = get_transient( 'r_daily_recipe' );
+        $recipe_id        = get_transient( 'prrecipe_daily_recipe' );
 
         if( !$recipe_id ){
-        $recipe_id      = r_get_random_recipe();
+        $recipe_id      = prrecipe_get_random_recipe();
 
         set_transient(
-            'r_daily_recipe',
+            'prrecipe_daily_recipe',
             $recipe_id,
             DAY_IN_SECONDS
         );
@@ -89,6 +89,7 @@ class PRRECIPE_Daily_Recipe_Widget extends WP_Widget {
     <?php
 
     echo $after_widget;
+
 	}
 
 }
