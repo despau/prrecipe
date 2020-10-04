@@ -35,6 +35,7 @@ include( 'includes/widgets/daily-recipe.php' );
 include( 'includes/cron.php' );
 include( 'includes/deactivate.php' );
 include( 'includes/utility.php' );
+include( 'includes/shortcodes/creator.php' );
 
 
 // Hooks
@@ -53,3 +54,4 @@ add_action( 'prrecipe_daily_recipe_hook', 'prrecipe_daily_generate_recipe' );
 
 
 // Shortcodes
+add_shortcode( 'recipe_creator', 'prrecipe_recipe_creator_shortcode' );
