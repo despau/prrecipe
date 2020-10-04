@@ -36,6 +36,8 @@ include( 'includes/cron.php' );
 include( 'includes/deactivate.php' );
 include( 'includes/utility.php' );
 include( 'includes/shortcodes/creator.php' );
+include( 'process/submit-user-recipe.php' );
+
 
 
 // Hooks
@@ -51,6 +53,8 @@ add_action( 'admin_init', 'prrecipe_admin_init' );
 add_action( 'enqueue_block_editor_assets', 'prrecipe_enqueue_block_editor_assets' );
 add_action( 'widgets_init', 'prrecipe_widgets_init' );
 add_action( 'prrecipe_daily_recipe_hook', 'prrecipe_daily_generate_recipe' );
+add_action( 'wp_ajax_prrecipe_submit_user_recipe', 'prrecipe_submit_user_recipe' );
+add_action( 'wp_ajax_nopriv_prrecipe_submit_user_recipe', 'prrecipe_submit_user_recipe' );
 
 
 // Shortcodes
