@@ -41,6 +41,14 @@ function prrecipe_rate_recipe(){
 
     update_metadata( $post_ID, 'recipe_data', $recipe_data );
 
+    // CUSTOM HOOK THAT DEVELOPERS CAN HOOK INTO
+    // The array of parameters will sent to any funcion that hooks into this Hook
+    do_action( 'recipe-rated', [
+        'post_id'       =>  $post_ID,
+        'rating'        =>  $rating_count,
+        'user_IP'       =>  $user_IP
+    ] );
+
     $output['status']   =   2;
     wp_send_json( $output );
 }
