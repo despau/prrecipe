@@ -18,7 +18,8 @@ function prrecipe_enqueue_scripts(){
     );
 
     wp_localize_script( 'prrecipe_main', 'recipe_obj', [
-        'ajax_url'      =>  admin_url( 'admin-ajax.php' )
+        'ajax_url'      =>  admin_url( 'admin-ajax.php' ),
+        'home_url'      =>  home_url( '/' )
     ]);
 
     wp_enqueue_script( 'prrecipe_rateit' );

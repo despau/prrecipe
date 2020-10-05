@@ -21,6 +21,7 @@ if ( ! function_exists( 'add_action' )) {
 define('RECIPE_PLUGIN_URL', __FILE__ );
 
 
+
 // Includes
 include( 'includes/activate.php' );
 include( 'includes/init.php' );
@@ -37,6 +38,8 @@ include( 'includes/deactivate.php' );
 include( 'includes/utility.php' );
 include( 'includes/shortcodes/creator.php' );
 include( 'process/submit-user-recipe.php' );
+include( 'includes/shortcodes/auth-form.php' );
+include( 'process/create-account.php' );
 
 
 
@@ -55,7 +58,9 @@ add_action( 'widgets_init', 'prrecipe_widgets_init' );
 add_action( 'prrecipe_daily_recipe_hook', 'prrecipe_daily_generate_recipe' );
 add_action( 'wp_ajax_prrecipe_submit_user_recipe', 'prrecipe_submit_user_recipe' );
 add_action( 'wp_ajax_nopriv_prrecipe_submit_user_recipe', 'prrecipe_submit_user_recipe' );
+add_action( 'wp_ajax_nopriv_prrecipe_create_account', 'prrecipe_create_account' );
 
 
 // Shortcodes
 add_shortcode( 'recipe_creator', 'prrecipe_recipe_creator_shortcode' );
+add_shortcode( 'recipe_auth_form', 'prrecipe_recipe_auth_form_shortcode' );
