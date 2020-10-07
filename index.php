@@ -40,6 +40,7 @@ include( 'includes/shortcodes/creator.php' );
 include( 'process/submit-user-recipe.php' );
 include( 'includes/shortcodes/auth-form.php' );
 include( 'process/create-account.php' );
+include( 'process/login.php' );
 
 
 
@@ -59,6 +60,8 @@ add_action( 'prrecipe_daily_recipe_hook', 'prrecipe_daily_generate_recipe' );
 add_action( 'wp_ajax_prrecipe_submit_user_recipe', 'prrecipe_submit_user_recipe' );
 add_action( 'wp_ajax_nopriv_prrecipe_submit_user_recipe', 'prrecipe_submit_user_recipe' );
 add_action( 'wp_ajax_nopriv_prrecipe_create_account', 'prrecipe_create_account' );
+add_action( 'wp_ajax_nopriv_prrecipe_user_login', 'prrecipe_user_login' );
+
 
 
 // Shortcodes

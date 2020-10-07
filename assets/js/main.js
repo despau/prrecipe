@@ -86,7 +86,6 @@
                     '<div class="alert alert-danger">Unable to create an account.</div>'
                 );
                 $("#register-form").show();
-
             }
 
         });
@@ -103,7 +102,7 @@
 
         var form                                    =   {
             _wpnonce:                                   $("#_wpnonce").val(),
-            action:                                     "recipe_user_login",
+            action:                                     "prrecipe_user_login",
             username:                                   $("#login-form-username").val(),
             pass:                                       $("#login-form-password").val()
         };

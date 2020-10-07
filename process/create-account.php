@@ -4,9 +4,9 @@
 function prrecipe_create_account(){
 
     $output             =   [ 'status' => 1 ];
-    $nonce              =   isset( $_POST[ '_wnonce' ] ) ? $_POST[ '_wnonce' ] : '';
+    $nonce              =   isset( $_POST[ '_wpnonce' ] ) ? $_POST[ '_wpnonce' ] : '';
 
-    if ( !wp_verify_nonce( $nonce, 'recipe_auth' ) ){
+    if ( ! wp_verify_nonce( $nonce, 'recipe_auth' ) ){
 
         wp_send_json( $output );
 
