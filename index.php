@@ -42,6 +42,7 @@ include( 'includes/shortcodes/auth-form.php' );
 include( 'process/create-account.php' );
 include( 'process/login.php' );
 include( 'includes/shortcodes/auth-alt-form.php' );
+include( 'includes/front/logout-link.php' );
 
 
 
@@ -64,8 +65,8 @@ add_action( 'wp_ajax_nopriv_prrecipe_create_account', 'prrecipe_create_account' 
 add_action( 'wp_ajax_nopriv_prrecipe_user_login', 'prrecipe_user_login' );
 // add_filter( 'authenticate', 'wp_authenticate_username_password', 20, 3 );
 // add_filter( 'authenticate', 'wp_authenticate_spam_check', 99 );
-add_filter( 'authenticate', 'prrecipe_alt_authenticate', 100, 3 );
-// add_filter( 'wp_nav_menu_secondary_items', 'ju_new_nav_menu_items', 999 );
+// add_filter( 'authenticate', 'prrecipe_alt_authenticate', 100, 3 );
+add_filter( 'wp_nav_menu_items', 'patronarrecipe_new_nav_menu_items', 999 );
 // add_action( 'wp_dashboard_setup', 'r_dashboard_widgets' );
 
 
