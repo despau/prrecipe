@@ -1,9 +1,7 @@
 <?php
 
-function prrecipe_rate_recipe(){
-
+function r_rate_recipe(){
     global $wpdb;
-
 
     $output             =   [ 'status' => 1 ];
     $post_ID            =   absint( $_POST['rid'] );
@@ -19,7 +17,7 @@ function prrecipe_rate_recipe(){
         wp_send_json( $output );
     }
 
-    // Insert Rating into database
+    // Insert Rating into the database
     $wpdb->insert(
         $wpdb->prefix . 'recipe_ratings',
         [
@@ -38,17 +36,13 @@ function prrecipe_rate_recipe(){
         WHERE recipe_id='" . $post_ID . "'"
     ), 1);
 
-
-
     update_post_meta( $post_ID, 'recipe_data', $recipe_data );
 
-    // CUSTOM HOOK THAT DEVELOPERS CAN HOOK
-    // The array of parameters will sent to any funcion that hooks into this Hook
-    do_action( 'recipe-rated', [
-        'post_id'       =>  $post_ID,
-        'rating'        =>  $rating_count,
-        'user_IP'       =>  $user_IP
-    ] );
+    do_action( 'recipe_rated', [
+        'post_id'           =>  $post_ID,
+        'rating'            =>  $rating_count,
+        'user_IP'           =>  $user_IP
+    ]);
 
     $output['status']   =   2;
     wp_send_json( $output );

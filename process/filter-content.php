@@ -27,7 +27,7 @@ function prrecipe_filter_recipe_content( $content ){
     );
 
     if( $rating_count > 0 ){
-        $recipe_html            =   str_replace( 'READONLY_PLACEHOLER', 'data-rateit-READONLY=true', $recipe_html) ;
+        $recipe_html            =   str_replace( 'READONLY_PLACEHOLER', '', $recipe_html) ;
     } else {
         $recipe_html            =   str_replace( 'READONLY_PLACEHOLDER', '', $recipe_html );
     }

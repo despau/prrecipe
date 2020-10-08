@@ -1,9 +1,9 @@
 <?php
 
-function prrerecipe_activate_plugin(){
-
+function r_activate_plugin(){
+    // 5.8 < 5.0
     if( version_compare( get_bloginfo( 'version' ), '5.0', '<' ) ){
-        wp_die( __( "You ust update WordPress to use this plugin.", "prrecipe") );
+        wp_die( __( "You must update WordPress to use this plugin.", 'recipe' ) );
     }
 
     global $wpdb;
@@ -20,8 +20,6 @@ function prrerecipe_activate_plugin(){
     require( ABSPATH . "/wp-admin/includes/upgrade.php" );
     dbDelta( $createSQL );
 
-    //setting transcient. worpdress will create this hook for us.
-    wp_schedule_event( time(), 'daily', 'prrecipe_daily_recipe_hook',  );
-
+    wp_schedule_event( time(), 'daily', 'r_daily_recipe_hook' );
 
 }

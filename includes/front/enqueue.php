@@ -3,9 +3,16 @@
 
 function prrecipe_enqueue_scripts(){
 
+
+    //STYLES
+    wp_register_style( 'r_auth', plugins_url( '/assets/css/auth.css', RECIPE_PLUGIN_URL ) );
     wp_register_style( 'prrecipe_rateit', plugins_url( '/assets/rateit/rateit.css', RECIPE_PLUGIN_URL ) );
+
+    wp_enqueue_style( 'prrecipe_rateit' );
     wp_enqueue_style( 'prrecipe_rateit' );
 
+
+    //SCRIPTS
     wp_register_script(
         'prrecipe_rateit',
         plugins_url( '/assets/rateit/jquery.rateit.min.js', RECIPE_PLUGIN_URL ),
