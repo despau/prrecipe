@@ -1,8 +1,8 @@
 <?php
 
-// get post meta data
 
-function prrecipe_save_post_admin( $post, $post_id, $update ){
+
+function prrecipe_save_post_admin( $post_id, $post, $update ){
 
 
     $recipe_data                =   get_post_meta( $post_id, 'recipe_data', true );
@@ -13,24 +13,3 @@ function prrecipe_save_post_admin( $post, $post_id, $update ){
     update_post_meta( $post_id, 'recipe_data', $recipe_data );
 
 }
-
-
-// function prrecipe_save_post_admin( $post, $post_id, $update ){
-
-
-//     if($_POST['post_type'] == "recipe"){
-
-//         // Retrieve the values from the form
-//         $recipe_rating = $_POST['rating'];
-//         $recipe_rating_count = $_POST['rating_count'];
-
-//         // Clean, sanitize and validate the input as appropriate
-
-//         // Save the updated data into the custom post meta database table
-//         update_post_meta( $post_id, "rating", $recipe_rating );
-//         update_post_meta( $post_id, "rating_count", $recipe_rating_count );
-
-//     }
-
-
-// }
