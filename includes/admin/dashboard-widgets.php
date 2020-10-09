@@ -22,9 +22,9 @@ function prrecipe_dashboard_widgets(){
       echo '<ul>';
 
         foreach($latest_ratings as $rating){
-            $title              = get_the_title( $rating->recipe_id );
-            $permalink          = get_the_permalink( $rating->recipe_id );
-            $rating_count       = $rating->rating;
+            $title              =   get_the_title( $rating->recipe_id );
+            $permalink          =   get_the_permalink( $rating->recipe_id );
+            $rating_count       =   $rating->rating;
 
             ?>
                 <li>

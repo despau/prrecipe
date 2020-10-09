@@ -66,13 +66,13 @@ class PRRECIPE_Daily_Recipe_Widget extends WP_Widget {
         $recipe_id        = get_transient( 'prrecipe_daily_recipe' );
 
         if( !$recipe_id ){
-        $recipe_id      = prrecipe_get_random_recipe();
+          $recipe_id      = prrecipe_get_random_recipe();
 
-        set_transient(
-            'prrecipe_daily_recipe',
-            $recipe_id,
-            DAY_IN_SECONDS
-        );
+          set_transient(
+              'prrecipe_daily_recipe',
+              $recipe_id,
+              DAY_IN_SECONDS
+          );
         }
 
     ?>
