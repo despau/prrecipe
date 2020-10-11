@@ -25,10 +25,6 @@ function prrecipe_filter_recipe_content( $content ){
         $recipe_html            =   str_replace( "RECIPE_RATING", $recipe_data['rating'] , $recipe_html );
     }
 
-    // echo 'recipe data';
-    // var_dump( $recipe_data) ;
-
-
     $user_IP            =   $_SERVER['REMOTE_ADDR'];
 
     $rating_count       =   $wpdb->get_var( $wpdb->prepare(

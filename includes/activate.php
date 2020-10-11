@@ -6,6 +6,11 @@ function prrerecipe_activate_plugin(){
         wp_die( __( "You ust update WordPress to use this plugin.", "prrecipe") );
     }
 
+
+    recipe_init();
+    flush_rewrite_rules(  );
+
+
     global $wpdb;
     $createSQL      =   "
     CREATE TABLE `" . $wpdb->prefix . "recipe_ratings` (
