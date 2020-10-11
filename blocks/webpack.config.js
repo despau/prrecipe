@@ -22,6 +22,7 @@ module.exports          =   {
     watch:                  true,
     devtool:                'cheap-eval-source-map',
     module: {
+
         rules:  [
             {
                 test:       /\.js$/,
@@ -36,7 +37,7 @@ module.exports          =   {
                             'css-loader',
                             'sass-loader'
                 ]
-            }
+            },
         ]
     },
 
