@@ -18,6 +18,7 @@ function prrecipe_save_options(){
       $recipe_opts['prrecipe_submission_login_required']  =   absint($_POST['prrecipe_submission_login_required']);
 
       update_option( 'prrecipe_opts', $recipe_opts );
+
       wp_redirect( admin_url('admin.php?page=prrecipe_plugin_opts&status=1') );
 
 }

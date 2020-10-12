@@ -51,7 +51,7 @@ function prrecipe_plugin_opts_page(){
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary"><?php _e('Update', 'prrecipe'); ?></button>
+                        <button type="submit" class="btn btn-primary"><?php _e('Update', 'prrecipe' ); ?></button>
                     </div>
 
                 </form>
