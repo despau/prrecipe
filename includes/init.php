@@ -49,4 +49,15 @@ function prrecipe_recipe_init(){
 
     register_post_type( 'recipe', $args );
 
+    // register_taxonomy( $taxonomy:string, $object_type:array|string, $args:array|string )
+    register_taxonomy(
+        'origin',
+        'recipe',
+        [
+            'label'         =>   __( 'Origin', 'prrecipe' ),
+            'rewrite'       =>  [ 'slug' => 'origin' ],
+            'show_in_rest'  =>  true
+        ]
+     );
+
 }

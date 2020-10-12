@@ -48,6 +48,8 @@ include( 'includes/shortcodes/twitter-follow.php' );
 include( 'includes/admin/menu.php' );
 include( 'includes/admin/options-page.php' );
 include( 'process/save-options.php');
+include( 'includes/admin/origin-fields.php' );
+include( 'process/save-origin.php');
 
 
 
@@ -75,6 +77,10 @@ add_action( 'wp_ajax_nopriv_prrecipe_user_login', 'prrecipe_user_login' );
 add_filter( 'wp_nav_menu_secondary_items', 'patronarrecipe_new_nav_menu_items', 999 );
 add_action( 'wp_dashboard_setup', 'prrecipe_dashboard_widgets' );
 add_action( 'admin_menu', 'prrerecipe_admin_menus' );
+add_action( 'origin_add_form_fields', 'prrecipe_origin_add_form_fields' );
+add_action( 'origin_edit_form_fields', 'prrecipe_origin_edit_form_fields' );
+add_action( 'create_origin', 'prrecipe_save_origin_meta' );
+add_action( 'edit_origin', 'prrecipe_edit_origin_meta' );
 
 
 // Shortcodes
