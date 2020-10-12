@@ -47,7 +47,7 @@ function prrerecipe_activate_plugin(){
 
     // add_role( $role:string, $display_name:string, $capabilities:array )
     add_role(
-        'prrecipe_author',
+        'recipe_author',
         __( 'Recipe Author', 'prrecipe' ),
         [
             'read'          =>  true,
@@ -55,6 +55,4 @@ function prrerecipe_activate_plugin(){
             'upload_files'  =>   true
         ]
     );
-
-
 }

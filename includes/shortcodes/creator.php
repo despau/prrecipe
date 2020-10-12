@@ -16,6 +16,10 @@ function prrecipe_recipe_creator_shortcode(){
 
     $creatorHTML            =   str_replace( 'CONTENT_EDITOR', $editorHTML, $creatorHTML );
 
+    global $wp_roles;
+
+	var_dump($wp_roles);
+
     return $creatorHTML;
 
 }
