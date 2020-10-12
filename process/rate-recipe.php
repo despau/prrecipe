@@ -6,6 +6,16 @@ function prrecipe_rate_recipe(){
 
 
     $output             =   [ 'status' => 1 ];
+
+    //lets grab the recipe_options
+    $recipe_option      =   get_option( 'prrecipe_opts' );
+
+    if( !is_user_logged_in(  ) && $recipe_option[ 'rating_loging_required' ] ){
+        //if both return true, then user is required to login. kill the script
+        wp_send_json( $output );
+    }
+
+
     $post_ID            =   absint( $_POST['rid'] );
     $rating             =   round( $_POST['rating'], 1 );
     $user_IP            =   $_SERVER['REMOTE_ADDR'];

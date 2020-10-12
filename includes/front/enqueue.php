@@ -10,6 +10,7 @@ function prrecipe_enqueue_scripts(){
 
     wp_enqueue_style( 'prrecipe_rateit' );
     wp_enqueue_style( 'prrecipe_rateit' );
+    wp_enqueue_media();
 
 
     //SCRIPTS

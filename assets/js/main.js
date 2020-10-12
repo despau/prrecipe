@@ -16,6 +16,31 @@
     });
 
 
+    //FOR MEDIA UPLOADER
+    var featured_frame       =   wp.media({
+        title:  'select or upload media',
+        button: {
+            text:   'Use this media'
+        },
+        multiple:   false
+    });
+
+    featured_frame.on( 'select', function(){
+        var attachment      =   featured_frame.state().get( 'selection' ).first().toJSON();
+
+        //set the src attribute of the button to the attachment url
+        $( '#recipe-img-preview' ).attr( 'src', attachment.url );
+        $( '#prrecipe_inputImgID' ).val( attachment.id );
+
+    });
+
+    $(document).on( 'click', '#recipe-img-upload-btn', function(e){
+        e.preventDefault();
+
+        featured_frame.open();
+    } );
+
+
     // SUBMIT RECIPE
     $( '#recipe-form' ).on( 'submit', function(e){
         e.preventDefault();
@@ -28,9 +53,10 @@
 
 
         var form        =   {
-            action:      'prrecipe_submit_user_recipe',
-            title:     $( '#prrecipe_inputTitle' ).val(),
-            content:    tinymce.activeEditor.getContent()
+            action:             'prrecipe_submit_user_recipe',
+            title:              $( '#prrecipe_inputTitle' ).val(),
+            content:            tinymce.activeEditor.getContent(),
+            attachment_id:      $( '#prrecipe_inputImgID' ).val( )
         }
 
         $.post( recipe_obj.ajax_url, form, function(data){

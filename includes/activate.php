@@ -36,7 +36,25 @@ function prrerecipe_activate_plugin(){
             'rating_login_required'             =>  1,
             'prrecipe_submission_login_required'  =>  1
         ];
+
+        add_option( 'prrecipe_opts', $opts );
+
     }
+
+
+    //set subscribers the capability of uploading media to our recipe posts inline.
+    global $wp_roles;
+
+    // add_role( $role:string, $display_name:string, $capabilities:array )
+    add_role(
+        'prrecipe_author',
+        __( 'Recipe Author', 'prrecipe' ),
+        [
+            'read'          =>  true,
+            'edit_posts'    =>  true,
+            'upload_files'  =>   true
+        ]
+    );
 
 
 }
