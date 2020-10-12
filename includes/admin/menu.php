@@ -9,7 +9,7 @@ function prrerecipe_admin_menus(){
         'Recipe Options',
         'Recipe Options',
         'edit_theme_options',
-        'prrerecipe_plugin_opts',
+        'prrecipe_plugin_opts',
         'prrecipe_plugin_opts_page'
     );
 

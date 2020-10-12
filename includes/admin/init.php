@@ -14,4 +14,7 @@ function prrecipe_admin_init(){
     //enqueueing admin scripts
     add_action( 'admin_enqueue_scripts', 'prrecipe_admin_enqueue' );
 
+
+    add_action( 'admin_post_prrecipe_save_options', 'prrecipe_save_options' );
+
 }

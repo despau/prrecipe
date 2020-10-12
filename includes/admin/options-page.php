@@ -2,6 +2,8 @@
 
 function prrecipe_plugin_opts_page(){
 
+    $recipe_opts            = get_option( 'prrecipe_opts' );
+
     ?>
 
         <div class="wrap">
@@ -43,7 +45,7 @@ function prrecipe_plugin_opts_page(){
                         <select class="form-control" name="prrecipe_submission_login_required">
                             <option value="1">No</option>
                             <option value="2"
-                                <?php echo $recipe_opts['recipe_submission_login_required'] == 2 ? 'SELECTED' : '' ?>>Yes</option>
+                                <?php echo $recipe_opts['prrecipe_submission_login_required'] == 2 ? 'SELECTED' : '' ?>>Yes</option>
                         </select>
 
                     </div>
