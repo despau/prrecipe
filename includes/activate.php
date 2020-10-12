@@ -29,4 +29,14 @@ function prrerecipe_activate_plugin(){
     wp_schedule_event( time(), 'daily', 'prrecipe_daily_recipe_hook',  );
 
 
+    $recipe_opts                                =   get_option( 'prrecipe_opts' );
+
+    if( !$recipe_opts ){
+        $opts                                   =   [
+            'rating_login_required'             =>  1,
+            'prrecipe_submission_login_required'  =>  1
+        ];
+    }
+
+
 }

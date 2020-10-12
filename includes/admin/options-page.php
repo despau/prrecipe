@@ -58,6 +58,24 @@ function prrecipe_plugin_opts_page(){
 
             </div>
 
+            <!-- TO SEPARATE CUSTOM FORM FROM SETTINGS API FORM -->
+            <hr>
+
+            <form action="options.php" method="post" >
+
+                <!-- post to OPTIONS.PHP when using the SETTINGS API -->
+                <?php
+
+                    settings_fields( 'prrecipe_opts_group' );
+                    do_settings_sections( 'prrecipe_opts_sections' );
+                    submit_button();
+
+                    //reember to enqueue this through the admin init
+
+                ?>
+
+            </form>
+
         </div>
 
     <?php
