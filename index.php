@@ -45,6 +45,8 @@ include( 'includes/shortcodes/auth-alt-form.php' );
 include( 'includes/front/logout-link.php' );
 include( 'includes/admin/dashboard-widgets.php' );
 include( 'includes/shortcodes/twitter-follow.php' );
+include( 'includes/admin/menu.php' );
+include( 'includes/admin/options-page.php' );
 
 
 
@@ -71,7 +73,7 @@ add_action( 'wp_ajax_nopriv_prrecipe_user_login', 'prrecipe_user_login' );
 // add_filter( 'wp_nav_menu_items', 'patronarrecipe_new_nav_menu_items', 999 );
 add_filter( 'wp_nav_menu_secondary_items', 'patronarrecipe_new_nav_menu_items', 999 );
 add_action( 'wp_dashboard_setup', 'prrecipe_dashboard_widgets' );
-
+add_action( 'admin_menu', 'prrerecipe_admin_menus' );
 
 
 // Shortcodes
