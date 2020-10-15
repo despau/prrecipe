@@ -1,0 +1,227 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Patronar Recipe\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-15 22:07+0000\n"
+"PO-Revision-Date: 2020-10-15 22:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.4.3; wp-5.5.1"
+
+#: includes/admin/origin-fields.php:11 includes/admin/origin-fields.php:32
+msgid "A URL a user can click to learn more information about this origin."
+msgstr ""
+
+#: includes/init.php:10
+msgid "Add New"
+msgstr ""
+
+#: includes/init.php:9
+msgctxt "Add New on Toolbar"
+msgid "Recipe"
+msgstr ""
+
+#: includes/init.php:11
+msgid "Add New Recipe"
+msgstr ""
+
+#: includes/init.php:8
+msgctxt "Admin Menu text"
+msgid "Recipes"
+msgstr ""
+
+#: includes/init.php:15
+msgid "All Recipes"
+msgstr ""
+
+#: includes/admin/columns.php:9
+msgid "Author"
+msgstr ""
+
+#: includes/admin/columns.php:12
+msgid "Average Rating"
+msgstr ""
+
+#: includes/admin/columns.php:10
+msgid "Categories"
+msgstr ""
+
+#. Author of the plugin
+msgid "Codear"
+msgstr ""
+
+#: includes/admin/columns.php:13
+msgid "Date"
+msgstr ""
+
+#: includes/init.php:13
+msgid "Edit Recipe"
+msgstr ""
+
+#: includes/admin/origin-fields.php:7 includes/admin/origin-fields.php:27
+msgid "More Info URL"
+msgstr ""
+
+#: includes/init.php:12
+msgid "New Recipe"
+msgstr ""
+
+#: includes/init.php:19
+msgid "No Recipes found in Trash."
+msgstr ""
+
+#: includes/init.php:18
+msgid "No Recipes found."
+msgstr ""
+
+#: includes/init.php:57 process/filter-content.php:34
+msgid "Origin"
+msgstr ""
+
+#: includes/init.php:20
+msgctxt ""
+"Overrides the “Featured Image” phrase for this post type. Added in 4.3"
+msgid "Recipe Cover Image"
+msgstr ""
+
+#: includes/init.php:25
+msgctxt ""
+"Overrides the “Insert into post”/”Insert into page” phrase (used when "
+"inserting media into a post). Added in 4.4"
+msgid "Insert into Recipe"
+msgstr ""
+
+#: includes/init.php:22
+msgctxt ""
+"Overrides the “Remove featured image” phrase for this post type. Added in 4.3"
+msgid "Remove cover image"
+msgstr ""
+
+#: includes/init.php:21
+msgctxt ""
+"Overrides the “Set featured image” phrase for this post type. Added in 4.3"
+msgid "Set cover image"
+msgstr ""
+
+#: includes/init.php:26
+msgctxt ""
+"Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used "
+"when viewing media attached to a post). Added in 4.4"
+msgid "Uploaded to this Recipe"
+msgstr ""
+
+#: includes/init.php:23
+msgctxt ""
+"Overrides the “Use as featured image” phrase for this post type. Added in 4.3"
+msgid "Use as cover image"
+msgstr ""
+
+#: includes/init.php:17
+msgid "Parent Recipes:"
+msgstr ""
+
+#. Name of the plugin
+msgid "Patronar Recipe"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Patronar Recipe plugin can be freely used in any projects. It Allow Users to "
+"create and rate Recipes."
+msgstr ""
+
+#: includes/init.php:6
+msgctxt "Post type general name"
+msgid "Recipes"
+msgstr ""
+
+#: includes/init.php:7
+msgctxt "Post type singular name"
+msgid "Recipe"
+msgstr ""
+
+#: process/filter-content.php:25
+msgid "Rating"
+msgstr ""
+
+#: includes/admin/columns.php:11
+msgid "Ratings count"
+msgstr ""
+
+#: includes/activate.php:50
+msgid "Recipe Author"
+msgstr ""
+
+#: includes/admin/options-page.php:13
+msgid "Recipe Settings"
+msgstr ""
+
+#: includes/init.php:27
+msgctxt ""
+"Screen reader text for the filter links heading on the post type listing "
+"screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4"
+msgid "Filter Recipes list"
+msgstr ""
+
+#: includes/init.php:29
+msgctxt ""
+"Screen reader text for the items list heading on the post type listing "
+"screen. Default “Posts list”/”Pages list”. Added in 4.4"
+msgid "Recipes list"
+msgstr ""
+
+#: includes/init.php:28
+msgctxt ""
+"Screen reader text for the pagination heading on the post type listing "
+"screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4"
+msgid "Recipes list navigation"
+msgstr ""
+
+#: includes/init.php:16
+msgid "Search Recipes"
+msgstr ""
+
+#: includes/init.php:24
+msgctxt ""
+"The post type archive label used in nav menus. Default “Post Archives”. "
+"Added in 4.4"
+msgid "Recipe archives"
+msgstr ""
+
+#: includes/admin/columns.php:8
+msgid "Title"
+msgstr ""
+
+#: includes/admin/options-page.php:54
+msgid "Update"
+msgstr ""
+
+#: includes/admin/options-page.php:31
+msgid "User login required for rating recipes"
+msgstr ""
+
+#: includes/admin/options-page.php:43
+msgid "User login required for submitting recipes"
+msgstr ""
+
+#: includes/init.php:14
+msgid "View Recipe"
+msgstr ""
+
+#: process/save-options.php:11
+msgid "You are not allowed to be on this page."
+msgstr ""
+
+#: includes/notice.php:15
+msgid "You have some recipes awating reviews"
+msgstr ""
+
+#: includes/activate.php:6
+msgid "You ust update WordPress to use this plugin."
+msgstr ""

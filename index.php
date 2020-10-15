@@ -52,6 +52,7 @@ include( 'includes/admin/origin-fields.php' );
 include( 'process/save-origin.php');
 include( 'includes/notice.php' );
 include( 'process/remove-notice.php');
+include( 'includes/textdomain.php' );
 
 
 
@@ -85,6 +86,7 @@ add_action( 'create_origin', 'prrecipe_save_origin_meta' );
 add_action( 'edit_origin', 'prrecipe_edit_origin_meta' );
 add_action( 'admin_notices', 'prrecipe_admin_notices');
 add_action( 'wp_ajax_prrecipe_dismiss_pending_recipe_notice', 'prrecipe_dismiss_pending_recipe_notice' );
+add_action( 'plugins_loaded', 'prrecipe_load_textdomain' );
 
 
 
