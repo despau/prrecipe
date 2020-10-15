@@ -50,6 +50,8 @@ include( 'includes/admin/options-page.php' );
 include( 'process/save-options.php');
 include( 'includes/admin/origin-fields.php' );
 include( 'process/save-origin.php');
+include( 'includes/notice.php' );
+include( 'process/remove-notice.php');
 
 
 
@@ -81,6 +83,9 @@ add_action( 'origin_add_form_fields', 'prrecipe_origin_add_form_fields' );
 add_action( 'origin_edit_form_fields', 'prrecipe_origin_edit_form_fields' );
 add_action( 'create_origin', 'prrecipe_save_origin_meta' );
 add_action( 'edit_origin', 'prrecipe_edit_origin_meta' );
+add_action( 'admin_notices', 'prrecipe_admin_notices');
+add_action( 'wp_ajax_prrecipe_dismiss_pending_recipe_notice', 'prrecipe_dismiss_pending_recipe_notice' );
+
 
 
 // Shortcodes

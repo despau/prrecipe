@@ -36,6 +36,17 @@ function prrecipe_submit_user_recipe() {
 
     }
 
+    // Update Recipe Pending Notice
+    $pending_recipe_count           = $wpdb->get_var(
+        "SELECT COUNT(*) FROM `" . $wpdb->posts ."`
+            WHERE posts_status='pending' AND post_type='recipe'"
+    );
+
+    //add a new recipe option if there is more than 5 pending recipes
+    if( $pending_recipe_count >= 5 ){
+        update_option( 'prrecipe_pending_recipe_notice', 1);
+    }
+
     $output['status']               =   2;
 
     wp_send_json($output);
